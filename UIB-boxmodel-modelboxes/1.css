@@ -1,0 +1,38 @@
+body{
+    text-align: center;
+  
+}
+h2 { margin: 0;
+    padding: 5px;
+}
+h3,p {
+    margin-bottom: 0;
+    padding: 5px;
+}
+h2,p {
+    margin-top: 0;
+}
+.primary-box {
+    background-color: black;
+    color: blanchedalmond;
+    padding-bottom: 20px;
+
+    border-bottom:solid brown 5px ;
+}
+.inside-box{
+    display: inline-block;
+    background-color: cornflowerblue;
+    margin:0;
+
+}
+.secondary-box{
+    background-color: blanchedalmond;
+    color: black;
+    padding-bottom: 20px;
+    border-bottom:solid brown 5px ;
+}
+.secondary-box, .inside-box, .primary-box{
+     margin-left: auto;
+    margin-right: auto; 
+    width: 250px; 
+}

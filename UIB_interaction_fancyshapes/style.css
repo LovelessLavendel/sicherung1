@@ -1,0 +1,30 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    margin-top: 10px;
+}
+p{
+    background-color: greenyellow;
+}
+p::after {
+    content: "das Ende";
+    background-color: hotpink;
+}
+p::before {
+    content: "Es war einmal... ";
+    background-color: hotpink;
+}
+.task-two img {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    width: 300px;
+}
+.task-three img{
+    transform: rotate(180deg);
+    width: 300px;
+}
+.task-three:hover img{
+    transform: rotate(30deg);
+}

@@ -1,0 +1,93 @@
+
+body {
+    margin: 0px;
+}
+header {
+    background-color: rgba(0, 0, 0, 0.719);
+    width: 100%;
+    height: 60px;
+    position: fixed;
+}
+
+.box {
+    width: 100%;
+    height: 600px;
+}
+
+.box1 {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-image: url(http://www.aljanh.net/data/archive/img/1176289364.jpeg);
+}
+h2{
+    position: absolute;
+    font-family: "Lucida Grande", Tahoma;
+    font-weight: lighter;
+    text-align: center;
+    color: whitesmoke;
+    vertical-align: middle;
+    padding: 50%;
+}
+.box1 p{
+    position: absolute;
+    font-family: "Lucida Grande", Tahoma;
+    font-weight: lighter;
+    text-align: right;
+    color: whitesmoke;
+    
+  
+}
+.box2 {
+    background-color: red;
+}
+
+.box3 {
+    background-color: blue;
+}
+
+.box4 {
+    background-color: blueviolet;
+}
+.box_4 {
+    display: flexbox;
+    height: 80vw;
+    width: 80vh;
+  
+  }
+.box_4 img{
+  height: 80px;
+  width: 80px;
+
+}
+.box5 {
+    background-color: black;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+}
+
+nav ul {
+    text-align: center;
+    margin:auto;
+    font-size: 18px;
+    list-style: none;
+}
+
+nav ul li {
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+    
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+
+}
