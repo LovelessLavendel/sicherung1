@@ -1,0 +1,54 @@
+.info-box {
+    
+   
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 22px 24px 42px 0px rgba(0,0,0,0.75);
+}
+.info-box::before{
+    content:"Read this" ;
+    display: inline-block;
+    margin: 15px 0;
+   
+}
+.info-box::after{
+    content:url(https://img.icons8.com/search) ;
+    display: inline-block;
+    margin: 15px 0;
+}
+body{
+    text-align: center;
+} 
+
+@media only screen and (min-width: 600px)
+{
+    .info-box {
+        display: inline-block;
+        width: 250px;
+        margin: 20px;
+        padding: 10px;
+        box-shadow: 22px 24px 42px 0px rgba(0,0,0,0.75);
+    }
+    .info-box::before{
+        content:"Read this" ;
+        display: inline-block;
+        margin: 15px 0;
+        font-weight: bold;
+       
+    }
+    .info-box::after{
+        content:url(https://img.icons8.com/search) ;
+        display: inline-block;
+        margin: 15px 0;
+       transform:scale(.7); /* !!! das bild wird wol kleiner aber der platzhalter beibt gleich gross!!!  */
+    } 
+
+    .info-box:hover{
+        background-color: blue;
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    .info-box:hover::after{
+       visibility: hidden;
+    }
+}

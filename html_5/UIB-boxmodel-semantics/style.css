@@ -1,0 +1,33 @@
+.se1 {
+    display: inline-block;
+
+    width: 40vw;
+}
+h1 {
+    text-align: center;
+    border-bottom: 1px solid  black  ;
+    width: 80vw;
+    margin: auto;
+    text-decoration-line: underline;
+}
+h2 {
+    text-align: center; 
+    text-decoration-line: underline;
+}
+footer {
+    display:inline-flex ;
+    width: 100vw;
+ 
+}
+footer ul {
+    list-style: none;
+}
+h3 {
+    text-decoration-line: underline;
+}
+body {
+    margin: 20px;
+}
+.se2  {
+     display: block;
+    }
