@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+}
+
+h1{
+    display: block;
+}
+
+.outerBox {
+    width: 800px;
+    background-color: rgb(231, 166, 86);
+    border: solid black 2px; 
+    padding: 20px;
+}
+
+.outerBox1 {
+    width: 800px;
+    background-color: rgb(169, 211, 16);
+    border: solid black 2px; 
+    padding: 20px;
+}
+
+.innerBox {
+    width: 33.33333%;
+    height: 150px;
+    background-color: blue;
+    border: solid black 3px;
+}
+
+.innerBox1 {
+    width: 25%;
+    height: 150px;
+    background-color: blue;
+    border: solid black 2px;
+}
+
+.innerBox2 {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    border: solid black 2px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.outerBox:hover .innerBox{
+    display: block;
+    
+}
