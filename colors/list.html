@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" type="text1/css" href="style.css">
+    <meta name="Author" content="S.köhler">
+    <title>Coloring Book</title>
+    <style>
+        .container {
+            max-width: 800px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            position: relative;
+
+        }
+
+        .box1 {
+            width: 150px;
+            height: 150px;
+
+        }
+
+        .box2 {
+            width: 150px;
+            height: 150px;
+
+        }
+
+        .box3 {
+            width: 150px;
+            height: 150px;
+
+        }
+
+
+        .box:hover {
+            transform: scale(1.25);
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .box1 .box2 .box3 p {
+            text-align: center;
+            display: block;
+           
+        }
+        .box1{
+            opacity: 0;
+        }
+        .box1:hover p {
+            opacity: 1;
+            
+        }
+
+        ul {
+            width: 50px;
+            transition: background-color 2s,
+                color 2s,
+                opacity 3s ease;
+            opacity: 0;
+            list-style: none;
+        }
+
+        #menutrigger:hover ul {
+            opacity: 1;
+        }
+
+        ul:hover {
+            /* -webkit-transition: width;*/
+            transition: width 2s;
+            /*transition: background-color 2s, color 2s;  // hir nicht einfügen wen es auch sichtbar ist wenn die maus raus geht*/
+            color: white;
+            background-color: black;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <a href=".test.html">Test page</a>
+        <h1> titel</h1>
+        <p>gug ztggitzdff </p>
+
+        <div id="menutrigger">
+            <h2> Hier öfnet sich die liste</h2>
+
+
+            <ul>
+                <li> erste</li>
+                <li> zweit</li>
+                <li> drite</li>
+                <li> virte</li>
+                <li> fünfte</li>
+
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="box1">
+                <img src="./1.jpeg" alt="bild">
+                <p> test test test test test test test test test test test test</p>
+            </div>
+            <div class="box2">
+                <img src="./2.jpeg" alt="bild">
+                <p> test test test test test test test test test test test test</p>
+            </div>
+            <div class="box3">
+                <img src="./3.jpeg" alt="bild">
+                <p> test test test test test test test test test test test test</p>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
