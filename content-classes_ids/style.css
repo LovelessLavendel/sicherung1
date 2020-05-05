@@ -1,0 +1,13 @@
+.li {
+color: blue;
+}
+.ueberschriften{
+    color: crimson;
+}
+#b_color {
+    background-color: rgb(189, 107, 182);
+}
+#b_c_a {
+    background-color: rgba(114, 189, 107,.5);
+}
+}
