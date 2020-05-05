@@ -1,0 +1,217 @@
+* { box-sizing: border-box; }
+body { 
+  font-family: sans-serif;
+  padding: 80px;
+  padding-left: 120px;
+}
+.myBox {
+  position: relative;
+  color: white;
+  width: 100px;
+  padding: 10px;
+  margin-bottom: 160px;
+  text-align: center;
+  background-color: green;
+}
+.myBox--1, .myBox--5 { background-color: green; }
+.myBox--2 { background-color: darkblue; }
+.myBox--3, .myBox--7{ background-color: darkcyan; }
+.myBox--4, .myBox--8{ background-color: red; }
+.myBox--6{ background-color: black;}
+/* Animation Code */
+
+@keyframes jumping {
+  0% {
+    bottom: 0px;
+    right: 0;
+    box-shadow: 5px 5px 3px grey;
+  }
+  
+  8% {
+    
+  }
+  50% {
+    right: 50px;
+    box-shadow: 15px 15px 3px grey;
+  }
+  
+  100% {
+    right: 0 ;
+    bottom: 50px;
+  }
+}
+
+@keyframes jumping2 {
+  from { /* 0% */
+    bottom: 0px;
+  }
+  
+  to { /* 100% */
+    bottom: 50px;
+  }
+}
+
+@keyframes move-around {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  25% {
+    left: 100px;
+    top: 0;
+  }
+  50% {
+    left: 100px;
+    top: 100px;
+  }
+  75% {
+    left: 0;
+    top: 100px
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+.myBox--1 {
+  /*animation-name: jumping;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out; */
+  animation: jumping 5s infinite alternate ease-in-out;
+}
+
+.myBox--2 {
+  animation: move-around 3s infinite ease-in-out;
+}
+/* Aufgaben 
+Hinweis: Erstelle für jede Aufgabe jeweils eine neue Box */
+
+/*1. AUFGABE: Lasse die Box von unten links nach oben rechts wandern und wieder zurück */
+
+@keyframes licks-unten {
+    from { /* 0% */
+      bottom: 100px;
+      top:100px;
+      left: 0px;
+      right: 100px;
+    }
+    
+    to { /* 100px */
+      bottom: 0px;
+      top: 00px;
+      left: 100px;
+      right: 0px;
+    }
+  }
+  .myBox--3 {
+    animation: licks-unten 3s infinite ease-in-out;
+  }
+
+/*2. AUFGABE: 
+a) Die Box soll sich in einen Kreis verwandeln und wieder zurück 
+
+
+b) Die Box soll sich zusätzlich von links nach rechts bewegen und auf der halben Strecke zum Kreis verwandeln und dann wieder zurück*/
+
+@keyframes kreis {
+    0% { /* 0% */
+     left: 0;
+    }
+    
+   25% { /* 100px */
+     border-radius: 50%;
+     background-color: royalblue;
+     left: 200px;
+    }
+    50% { /* 100px */
+        border-radius: 0%;
+        left: 400px;
+       }
+       75% { /* 100px */
+        border-radius: 50%;
+        background-color: royalblue;
+        left: 200px;
+       }
+       100% { /* 0% */
+        left: 0;
+       }
+  }
+
+
+  .myBox--4 {
+    animation: kreis 5s infinite ease-in-out;
+  }
+
+
+
+/*3. AUFGABE: Die Box soll sich durchgehend im Uhrzeigersinn drehen */
+
+@keyframes drehen{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.myBox--5 {
+    animation: drehen 2s infinite linear;
+  }
+
+
+
+/*4. AUFGABE: Die Farbe der Box soll durchgehend von schwarz zu grau faden, während man mit dem Mauszeiger über der Box hovered */
+.myBox--6:hover{
+  animation: color 3s infinite ease-in-out;
+ }
+@keyframes color{
+    0%{
+        
+    }
+    50%{
+        background-color: gray;
+    }
+    100%{
+        
+    }
+}
+
+
+
+/*5. AUFGABE: Realisiere folgende Animation: https://kurzelinks.de/vn1z 
+- Erstelle hierzu ein Navigations-Menü aus einer ungeordneten Liste
+- Die Animation wird bei hovern ausgelöst
+
+*/
+
+
+
+
+
+/*6. AUFGABE: Erstelle eine beliebige, kreative Animation*/
+.myBox--7{
+    animation: meins 5s infinite ease-in-out;
+}
+@keyframes meins{
+    0%{
+        transform: rotateY(0deg);
+    }
+    25%{
+        transform: rotateY(180deg)scale(.4);;
+         
+
+    }
+    50%{
+        transform: rotateX(-180deg)scale(.4);
+       
+    }
+    75%{
+        background-color: greenyellow;
+}
+    100%{
+
+    }
+}
