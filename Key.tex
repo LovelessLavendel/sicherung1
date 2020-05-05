@@ -1,0 +1,38 @@
+https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+Erzeugen eines neuen SSH-Schlüssels und Hinzufügen zum ssh-agent
+Nachdem Sie nach vorhandenen SSH-Schlüsseln gesucht haben, können Sie einen neuen SSH-Schlüssel für die Authentifizierung generieren und ihn dann zum ssh-agent hinzufügen.
+
+Mac
+Windows
+Linux
+Alle
+Wenn Sie noch keinen SSH-Schlüssel haben, müssen Sie einen neuen SSH-Schlüssel generieren . Wenn Sie nicht sicher sind, ob Sie bereits einen SSH-Schlüssel haben, suchen Sie nach vorhandenen Schlüsseln .
+
+Wenn Sie Ihre Passphrase nicht jedes Mal neu eingeben möchten, wenn Sie Ihren SSH-Schlüssel verwenden, können Sie den Schlüssel dem SSH-Agenten hinzufügen , der Ihre SSH-Schlüssel verwaltet und sich Ihre Passphrase merkt.
+
+Erzeugen eines neuen SSH-Schlüssels
+Öffnen Sie das Terminal .
+
+Fügen Sie den folgenden Text ein und ersetzen Sie ihn durch Ihre GitHub-E-Mail-Adresse.
+
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+Dadurch wird ein neuer SSH-Schlüssel erstellt, der die bereitgestellte E-Mail als Bezeichnung verwendet.
+
+> Generating public/private rsa key pair.
+Wenn Sie aufgefordert werden, "eine Datei einzugeben, in der der Schlüssel gespeichert werden soll", drücken Sie die Eingabetaste. Dies akzeptiert den Standardspeicherort der Datei.
+
+> Enter a file in which to save the key (/home/you/.ssh/id_rsa): [Press enter]
+Geben Sie an der Eingabeaufforderung eine sichere Passphrase ein. Weitere Informationen finden Sie unter "Arbeiten mit SSH-Passwörtern" .
+
+> Enter passphrase (empty for no passphrase): [Type a passphrase]> Enter same passphrase again: [Type passphrase again]
+Hinzufügen Ihres SSH-Schlüssels zum ssh-agent
+Bevor Sie dem ssh-agent einen neuen SSH-Schlüssel hinzufügen, um Ihre Schlüssel zu verwalten, sollten Sie nach vorhandenen SSH-Schlüsseln suchen und einen neuen SSH-Schlüssel generieren .
+Starten Sie den ssh-agent im Hintergrund.
+
+$ eval "$(ssh-agent -s)"
+> Agent pid 59566
+Fügen Sie dem ssh-agent Ihren privaten SSH-Schlüssel hinzu. Wenn Sie Ihren Schlüssel mit einem anderen Namen erstellt haben oder einen vorhandenen Schlüssel mit einem anderen Namen hinzufügen, ersetzen Sie id_rsa im Befehl durch den Namen Ihrer privaten Schlüsseldatei.
+
+$ ssh-add ~/.ssh/id_rsa
+Fügen Sie den SSH-Schlüssel Ihrem GitHub-Konto hinzu .
